@@ -1,0 +1,14 @@
+body{
+	background-color:#00796B;
+}
+
+h1{
+	color:#FFFFFF;
+}
+
+#roster, #player{
+	width: 500px;
+	background-color: #FFFFFF;
+
+
+}
