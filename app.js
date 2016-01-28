@@ -36,17 +36,36 @@ $(function(){
 	$("button.list").on("click",function(event){
 		event.preventDefault();
 		// List all Teams	
-			$.ajax({
-					headers: { 'X-Auth-Token': '35ece9681a1d4aea80ea1d8ef98fba35' },
-					url: 'http://api.football-data.org/v1/soccerseasons/399/teams',
-					dataType: 'json',
-					type: 'GET',
-			}).done(function(response) {
-				var teams = response["teams"];
-				for(var i=0;i<teams.length;i++)
-					$("#table1 tbody").append("<tr><td>"+teams[i].shortName +"</td> <td>test</td> <td>test</td></tr>");
+			// $.ajax({
+			// 		headers: { 'X-Auth-Token': '35ece9681a1d4aea80ea1d8ef98fba35' },
+			// 		url: 'http://api.football-data.org/v1/soccerseasons/398/leagueTable',
+			// 		dataType: 'json',
+			// 		type: 'GET',
+			// }).done(function(response) {
+				$("#table1").DataTable({
+					"ajax" : {
+							"url" : "http://api.football-data.org/v1/soccerseasons/399/leagueTable",
+							"dataSrc" : "standing",
+							"type" : "GET",
+							"headers" : {"X-Auth-Token": "35ece9681a1d4aea80ea1d8ef98fba35"}
+					},
+					"columns": [
+						{ "data": "position" },
+            { "data": "teamName" },            
+            { "data": "playedGames" },
+            { "data": "points" }
+          ],
+
+          "order" : [[0,"asc"]]
+
+				});
+				//var teams = response["teams"];
+				//var marketVal = response.squadMarketValue;
+				//console.log(response);
+				// for(var i=0;i<teams.length;i++)
+					// $("#table1 tbody").append("<tr><td>"+teams[i].shortName +"</td><td>" + teams[i].squadMarketValue + "</td> <td>test</td></tr>");
 			}); 					 
-		});
+		//});
 
 
 });//End Main

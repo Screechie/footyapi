@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>La Liga Football Query</title>
 		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
 	</head>
 	<body>
 	<section id = "main">
@@ -28,9 +29,10 @@
 			<table id = "table1">
 				<thead>
 					<tr>
+						<th>Position</th>
 						<th>Team Name</th>
-						<th>Market value</th>
-						<th>Team Position</th>
+						<th>Games Played</th>
+						<th>Points</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -48,12 +50,11 @@
 		</center>
 		</section>
 
-		<section id="tabledata">
-			
-		</section>
+		
 
 		<script src = "bower_components/jquery/dist/jquery.min.js"></script>
 		<script src = "bower_components/jquery-ui/jquery-ui.min.js"></script>	
+		<script src = "//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 		<script src = "app.js"></script>
 	</body>
 </html>
