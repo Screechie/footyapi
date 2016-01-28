@@ -2,28 +2,58 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Football Query</title>
+		<title>La Liga Football Query</title>
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
+	<section id = "main">
 		<center>
-			<h1>Find your favourite team's current roster and player stats</h1>
-			
-			<form action="" class="form">	
+				<h1 id="heading">La Liga Query</h1>
+		</center>
+
+		<center id = "search_area">			
+			<form action="" id="form">	
 				<input type="text" placeholder = "Team search" id="roster"></input>
-				<button id = "getRoster">Get Roster</button>				
-			</form>
-			
-			</br>
-			
-			<form action="" class = "form2">
-				<input type="text" placeholder = "Player search" id = "player"></input>
-				<button id="getPlayer">Get Player Stats</button>
+				<button id = "getRoster">Get Roster</button></br></br>
 			</form>
 
+			<form action="" id="form1">
+				<input type="text" placeholder = "Player search" id = "player"></input>
+				<button id="getPlayer">Get Player Stats</button></br></br>
+			</form>
+
+			
+			<button class ="list">List All Teams</button></br></br>
+
+			<table id = "table1">
+				<thead>
+					<tr>
+						<th>Team Name</th>
+						<th>Market value</th>
+						<th>Team Position</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+			
+				
+			
+			</br>
 		</center>
+		
+		<center>
+			<img src="logo.png" alt="logo" id="logo">
+		</center>
+		</section>
+
+		<section id="tabledata">
+			
+		</section>
 
 		<script src = "bower_components/jquery/dist/jquery.min.js"></script>
 		<script src = "bower_components/jquery-ui/jquery-ui.min.js"></script>	
+		<script src = "app.js"></script>
 	</body>
 </html>

@@ -2,13 +2,47 @@ body{
 	background-color:#00796B;
 }
 
-h1{
+
+center h1#heading{
 	color:#FFFFFF;
+	font-family: sans-serif;
+	/*background-color: #00BCD4;*/
+	width: 250px;
 }
 
 #roster, #player{
 	width: 500px;
+	height: 30px;
 	background-color: #FFFFFF;
+}
 
+button{
+	background-color: #00BCD4;
+	border: none;
+	width: 100px;
+	font-weight: bold;
+	color:#FFFFFF;
+	height: 35px;
+}
 
+button#getPlayer{
+	position: relative;
+	top: -7px;
+}
+
+#search_area{
+	background-color: #FFFFFF;
+	margin:50px;
+	padding:30px 10px 10px;
+	min-height:175px;
+}
+
+#logo{
+	width: 100px;
+	height:100px;
+}
+
+section#main, section#tabledata{
+	height: 100vh;
+	width: 100vw;
 }
