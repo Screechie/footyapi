@@ -9,7 +9,7 @@
 	<body>
 	<section id = "main">
 		<center>
-				<h1 id="heading">La Liga Query</h1>
+				<h1 id="heading">Serie A Query</h1>
 		</center>
 
 		<center id = "search_area">			
@@ -22,16 +22,16 @@
 				<input type="text" placeholder = "Player search" id = "player"></input>
 				<button id="getPlayer">Get Player Stats</button></br></br>
 			</form>
-
 			
-			<button class ="list">List All Teams</button></br></br>
+			<button class ="topscore">Top Scorers</button>
+			<button class ="list">League Standings</button></br></br>
 
-			<table id = "table1">
+			<table id = "table1" class="display">
 				<thead>
 					<tr>
 						<th>Position</th>
 						<th>Team Name</th>
-						<th>Games Played</th>
+						<th>Matches Played</th>
 						<th>Points</th>
 					</tr>
 				</thead>
@@ -39,11 +39,57 @@
 					
 				</tbody>
 			</table>
-			
-				
+
+
+			<table id = "table2" class="display">
+				<thead>
+					<tr>
+						<th>Player</th>
+						<th>Goals</th>
+				</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+
+			<table id = "table3" class="display">
+				<thead>
+					<tr>
+						<th>Team</th>
+						<th>Name</th>
+						<th>Lastname</th>
+						<th>Nationality</th>
+						<th>Position</th>
+						<th>Jersey No.</th>
+				</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+
+			<table id = "table4" class="display">
+				<thead>
+					<tr>
+						<th>Team</th>
+						<th>Name</th>
+						<th>Lastname</th>
+						<th>Nationality</th>
+						<th>Position</th>
+						<th>Jersey No.</th>
+				</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+
+						
 			
 			</br>
 		</center>
+
 		
 		<center>
 			<img src="logo.png" alt="logo" id="logo">
