@@ -2,9 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>La Liga Football Query</title>
+		<title>Serie A Football Query</title>
 		<link rel="stylesheet" href="styles.css">
 		<link rel="stylesheet" href="//cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="bower_components/jquery-ui/themes/trontastic/jquery-ui.min.css">
 	</head>
 	<body>
 	<section id = "main">
@@ -24,36 +25,15 @@
 			</form>
 			
 			<button class ="topscore">Top Scorers</button>
-			<button class ="list">League Standings</button></br></br>
-
-			<table id = "table1" class="display">
-				<thead>
-					<tr>
-						<th>Position</th>
-						<th>Team Name</th>
-						<th>Matches Played</th>
-						<th>Points</th>
-					</tr>
-				</thead>
-				<tbody>
-					
-				</tbody>
-			</table>
-
-
-			<table id = "table2" class="display">
-				<thead>
-					<tr>
-						<th>Player</th>
-						<th>Goals</th>
-				</tr>
-				</thead>
-				<tbody>
-					
-				</tbody>
-			</table>
-
-			<table id = "table3" class="display">
+			<button class ="list">League Standings</button></br></br>			
+			
+			<div id="table_1">
+			</div>
+			<div id="table_2">
+			</div>
+			<div id="table_3">
+			</div>
+			<!-- <table id = "table3" class="display">
 				<thead>
 					<tr>
 						<th>Team</th>
@@ -64,11 +44,10 @@
 						<th>Jersey No.</th>
 				</tr>
 				</thead>
-				<tbody>
-					
+				<tbody>					
 				</tbody>
-			</table>
-
+			</table> -->
+			
 			<table id = "table4" class="display">
 				<thead>
 					<tr>
@@ -80,23 +59,18 @@
 						<th>Jersey No.</th>
 				</tr>
 				</thead>
-				<tbody>
-					
+				<tbody>					
 				</tbody>
 			</table>
-
-						
 			
+
 			</br>
 		</center>
 
-		
 		<center>
 			<img src="logo.png" alt="logo" id="logo">
 		</center>
 		</section>
-
-		
 
 		<script src = "bower_components/jquery/dist/jquery.min.js"></script>
 		<script src = "bower_components/jquery-ui/jquery-ui.min.js"></script>	
