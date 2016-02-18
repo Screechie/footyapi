@@ -3,26 +3,28 @@ $(function(){
 
 	//Set Autocompletion for teams
 		$("#roster").autocomplete({
-			//source: ["Milan", "Juventus", "Roma", "Sampdoria", "Udinese"],
-			minLength: 3,
+			source: ["Milan", "Juventus", "Roma", "Sampdoria", "Udinese","Napoli","Fiorentina",
+								"Inter","Empoli","Sassuolo","Lazio","Chievo","Bologna","Torino","Atalanta",
+								"Palermo","Genoa","Frosinone","Carpi","Verona"],
+			minLength: 2,
 			//delay: 
-			source: function(request,response){
-				$.ajax({
-					headers:{"X-Mashape-Key": "bilVMebejrmshNXfDlOtYvNUOxjAp1pY0GEjsn7LV5xmaJ8Dwq"},
-					url: "https://sportsop-soccer-sports-open-data-v1.p.mashape.com/v1/leagues/serie-a/seasons/15-16/teams",
-					dataType: "json",
-					type: "GET",
-					data: {term: request.term},
-					success: function(data){
-						//use .map to transform data object into an array
-						response($.map(data.data.teams,function(value){
-												return value.name;
-										}));
-						console.log(data);
-						console.log(request.term);
-					}
-				})
-			} 
+			// source: function(request,response){
+			// 	$.ajax({
+			// 		headers:{"X-Mashape-Key": "bilVMebejrmshNXfDlOtYvNUOxjAp1pY0GEjsn7LV5xmaJ8Dwq"},
+			// 		url: "https://sportsop-soccer-sports-open-data-v1.p.mashape.com/v1/leagues/serie-a/seasons/15-16/teams",
+			// 		dataType: "json",
+			// 		type: "GET",
+			// 		data: {term: request.term},
+			// 		success: function(data){
+			// 			//use .map to transform data object into an array
+			// 			response($.map(data.data.teams,function(value){
+			// 									return value.name;
+			// 							}));
+			// 			console.log(data);
+			// 			console.log(request.term);
+			// 		}
+			// 	})
+			// } 
 		});
 
 
@@ -105,9 +107,36 @@ $(function(){
 				 		dataType: "json",
 				 		type: "GET",
 			}).done(function(response) {
+				var profiles = response.data.players;
+				console.log(profiles);
+
+				function capitalize(namestr) {
+    			return String(namestr).charAt(0).toUpperCase() + String(namestr).slice(1);
+				}
+
+				//Split player name string to acquire a first and last name
+				var playernames = player.split(" ");
+				fname = playernames[0];
+				lname = playernames[1];
+				console.log("firstname"+capitalize(fname));
+				console.log("lastname"+capitalize(lname));
 
 
-			
+				for(i=0; i<profiles.length;i++){
+
+					//Fullname provided
+					// if(capitalize(fname) == profiles[i].name || capitalize(lname) == profiles[i].fullname){
+					// 	console.log(profiles[i]);
+					if((profiles[i].name+profiles[i].fullname).includes(player)){
+						console.log(profiles[i]);
+
+					}
+				}
+					//First name only
+
+					//Last name only
+				//}
+
 			});
 		}
 	});//End Form1
@@ -186,7 +215,8 @@ $(function(){
 			"order" : [[1,"desc"]]
 		});
 	});
-});//End Main 					 
+});//End Main 
+
 
 //var teams = response["teams"];
 //var marketVal = response.squadMarketValue;
