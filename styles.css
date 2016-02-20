@@ -10,7 +10,6 @@ center h1#heading{
 	width: 200px;
 
 }
-
 #roster, #player{
 	width: 500px;
 	height: 30px;
@@ -26,10 +25,10 @@ button{
 	height: 35px;
 }
 
-button#getPlayer{
+/*button#getPlayer{
 	position: relative;
-	top: -7px;
-}
+	top: 0px;
+}*/
 
 #search_area{
 	background-color: #FFFFFF;
@@ -40,7 +39,7 @@ button#getPlayer{
 
 #logo{
 	width: 100px;
-	height:100px;
+	height:70px;
 }
 
 section#main, section#tabledata{

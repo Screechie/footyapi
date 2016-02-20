@@ -83,7 +83,6 @@ $(function(){
 				   "sClass": "center"}
 				]
 			});	
-			
 		}	
 	});//End Form
 
@@ -114,21 +113,21 @@ $(function(){
     			return String(namestr).charAt(0).toUpperCase() + String(namestr).slice(1);
 				}
 
-				//Split player name string to acquire a first and last name
+				//Split player name string and capitalize first and last name
 				var playernames = player.split(" ");
-				fname = playernames[0];
-				lname = playernames[1];
-				console.log("firstname"+capitalize(fname));
-				console.log("lastname"+capitalize(lname));
-
+				fname = capitalize(playernames[0]);
+				lname = capitalize(playernames[1]);
+				
 
 				for(i=0; i<profiles.length;i++){
-
+					namestring=profiles[i].name+profiles[i].fullname;
+					//console.log(profiles[i].name+profiles[i].fullname);
 					//Fullname provided
 					// if(capitalize(fname) == profiles[i].name || capitalize(lname) == profiles[i].fullname){
 					// 	console.log(profiles[i]);
-					if((profiles[i].name+profiles[i].fullname).includes(player)){
+					if((namestring).indexOf(fname) > -1 || (namestring).indexOf(lname) > -1){
 						console.log(profiles[i]);
+						//Display profile in a table
 
 					}
 				}
