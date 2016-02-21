@@ -25,10 +25,10 @@ button{
 	height: 35px;
 }
 
-/*button#getPlayer{
+button.list{
 	position: relative;
-	top: 0px;
-}*/
+	top: -8px;
+}
 
 #search_area{
 	background-color: #FFFFFF;
@@ -50,3 +50,4 @@ section#main, section#tabledata{
 .center{
 	text-align: center;
 }
+

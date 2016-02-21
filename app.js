@@ -120,22 +120,33 @@ $(function(){
 				
 
 				for(i=0; i<profiles.length;i++){
+
 					namestring=profiles[i].name+profiles[i].fullname;
-					//console.log(profiles[i].name+profiles[i].fullname);
-					//Fullname provided
-					// if(capitalize(fname) == profiles[i].name || capitalize(lname) == profiles[i].fullname){
-					// 	console.log(profiles[i]);
+
 					if((namestring).indexOf(fname) > -1 || (namestring).indexOf(lname) > -1){
 						console.log(profiles[i]);
-						//Display profile in a table
-
+						//Display profile info
+						$("#player_profile").html("<h1>Player Profile for "+
+																				profiles[i].name+" "+profiles[i].fullname+"</h1>"+
+																				"<p>First Name: "+profiles[i].name +"</p>"+
+																				"<p>Last Name: "+profiles[i].fullname+"</p>"+
+																				"<p>Contract Start: "+profiles[i].contract_start+"</p>"+
+																				"<p>Contract Ends: "+profiles[i].contract_end+"</p>"+
+																				"<p>Birthplace: "+profiles[i].birthplace+"</p>"+
+																				"<p>Birthday: "+profiles[i].birthday+"</p>"+
+																				"<p>Height: "+profiles[i].height+"</p>"+
+																				"<p>Position: "+profiles[i].position+"</p>"+
+																				"<p>Nationality: "+profiles[i].nationality+"</p>"+
+																				"<p>National Team: "+profiles[i].national_team+"</p>"+
+																				"<p>Agent: "+profiles[i].agent+"</p>"
+																				).css({
+																							"border":"1px",
+																							"border-style":"solid",
+																							"border-color":"grey"
+																				});
 					}
 				}
-					//First name only
-
-					//Last name only
-				//}
-
+					
 			});
 		}
 	});//End Form1
